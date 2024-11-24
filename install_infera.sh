@@ -38,8 +38,8 @@ cp ~/infera ./
 # Создание Dockerfile
 echo "Создаем Dockerfile..."
 cat <<EOF > Dockerfile
-FROM ubuntu:22.04
-RUN apt-get update && apt-get install -y curl
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y curl file
 COPY infera /app/infera
 RUN chmod +x /app/infera
 WORKDIR /app
